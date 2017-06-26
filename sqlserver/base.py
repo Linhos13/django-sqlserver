@@ -40,7 +40,7 @@ DatabaseError = Database.DatabaseError
 IntegrityError = Database.IntegrityError
 
 
-_SUPPORTED_OPTIONS = ['failover_partner']
+_SUPPORTED_OPTIONS = ['failover_partner', 'timeout']
 
 
 def utc_tzinfo_factory(offset):
