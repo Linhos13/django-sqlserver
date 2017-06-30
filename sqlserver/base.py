@@ -72,6 +72,7 @@ class DatabaseFeatures(sqlserver_ado.base.DatabaseFeatures):
     has_select_for_update = True
     has_select_for_update_nowait = True
     for_update_after_from = True
+    supports_transactions = True
 
 
 class DatabaseWrapper(sqlserver_ado.base.DatabaseWrapper):
