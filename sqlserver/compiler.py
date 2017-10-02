@@ -55,7 +55,7 @@ class SQLCompiler(sqlserver_ado.compiler.SQLCompiler):
             where, w_params = self.compile(self.where) if self.where is not None else ("", [])
             having, h_params = self.compile(self.having) if self.having is not None else ("", [])
 
-            combinator = self.query.combinator
+            combinator = self.query.combinator if hasattr(self.query, 'combinator') else None
             features = self.connection.features
             if combinator:
                 if not getattr(features, 'supports_select_{}'.format(combinator)):
