@@ -11,3 +11,6 @@ class DatabaseOperations(sqlserver_ado.operations.DatabaseOperations):
             return "WITH (ROWLOCK, UPDLOCK, NOWAIT)"
         else:
             return "WITH (ROWLOCK, UPDLOCK)"
+
+    def adapt_datetimefield_value(self, value):
+        return value
